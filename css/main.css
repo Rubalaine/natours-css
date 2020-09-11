@@ -263,4 +263,34 @@ body {
   -webkit-animation: moveInRight 1s ease-out;
           animation: moveInRight 1s ease-out;
 }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+  background-color: orangered;
+  float: left;
+}
+
+.row .col-1-of-2:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-3 {
+  width: clac(100%-2 * 6rem / 3);
+}
 /*# sourceMappingURL=main.css.map */
