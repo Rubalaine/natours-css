@@ -6,9 +6,12 @@
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
-@import "base/utils.scss";
+@import "base/utils";
 
 @import "components/button";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/card";
 
 @import "layout/header";
 @import "base/typography";
