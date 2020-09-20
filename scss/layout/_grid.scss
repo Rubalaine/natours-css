@@ -4,14 +4,29 @@
     margin: 0 auto;
     &:not(:last-child){    
         margin-bottom: $gutter-vertical;
+        @include responsive(tablet-portait){
+            margin-bottom: $gutter-vertical-small; 
+        }
+    }
+    @include responsive(tablet-portait){
+        max-width: 50rem;
+        padding: 0 3rem;
+
     }
     @include clearfix;
 
     [class^="col-"]{
-        // background-color: orangered;
         float: left;
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include responsive(tablet-portait){
+            margin-right: 0; 
+            margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include responsive(tablet-portait){
+            width: 100% !important;
         }
     }
     .col-1-of-2{

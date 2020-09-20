@@ -5,12 +5,17 @@
     color: $color-white;
     backface-visibility: hidden;
     margin-bottom: 3rem;
+    
     &--main{
         display: block;
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
         animation: moveInLeft 1s ease-out;
+        @include responsive(phone) { 
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     &--sub{
         display: block;
@@ -18,6 +23,10 @@
         font-weight: 700;
         letter-spacing: 1.5rem;
         animation: moveInRight 1s ease-out;
+        @include responsive(phone) { 
+            letter-spacing: .5rem;
+            // font-size: 5rem;
+        }
     }
 }
 
@@ -30,6 +39,12 @@
     color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+    @include responsive (tablet-portait){
+        font-size: 3rem;
+    }
+    @include responsive (phone){
+        font-size: 2.5rem;
+    }
     &:hover{
         transform: skewY(-4deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);

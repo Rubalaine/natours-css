@@ -24,4 +24,7 @@ body {
     color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
+    @include responsive(tablet-portait) { 
+        padding: 0;
+    }
 }

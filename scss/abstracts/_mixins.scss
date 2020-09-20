@@ -13,6 +13,12 @@
     position: absolute;
 }
 
+/*
+    Responsive order
+    Base + Typography
+    General Layout + Grid
+    Paga Layout + Component
+*/
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {
         @media (max-width: 37.5em){@content}; //600px
