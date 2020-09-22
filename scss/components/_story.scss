@@ -8,6 +8,14 @@
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+    @include responsive(tablet-portait){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include responsive(phone){
+        transform: skew(0);  
+    }  
     &__shape {
         position: relative;
         width: 15rem;
@@ -18,6 +26,9 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         -webkit-shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(11deg);
+        @include responsive(phone){
+            transform: translateX(-3rem) skewx(0);  
+        }
     }
     &__img {
         height:100%;
@@ -27,6 +38,10 @@
     }
     &__text {
         transform: skewX(12deg);
+        @include responsive(phone){
+            transform: skewX(0);  
+        }
+        
     }
     &__caption{
         text-align: center;

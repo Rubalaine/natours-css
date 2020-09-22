@@ -47,10 +47,19 @@
             transform: scale(1.1) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
             z-index: 20;
+            @include responsive(tablet-landscape){
+                outline: none;
+                transform: none;
+                box-shadow: initial;
+                z-index: initial;
+            }
         }
         
     }
     &:hover &__photo:not(:hover){
         transform: scale(.95);
+        @include responsive(tablet-landscape){
+            transform: none;
+        }
     }
 }
